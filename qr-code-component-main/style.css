@@ -2,9 +2,16 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background-color: hsl(212, 45%, 89%);
+  --white: hsl(0, 0%, 100%);
+  --mid-darkblue: hsl(218, 44%, 22%);
+  --saturated-blue: hsl(216, 15%, 48%);
 }
 body {
-  background-color: hsl(212, 45%, 89%);
+  background-color: var(--background-color);
   font-family: "Outfit", sans-serif;
   min-height: 100vh;
   display: flex;
@@ -13,11 +20,11 @@ body {
   font-weight: 400, 7000;
 }
 .container {
-  max-width: 360px;
+  max-width: 360x;
   margin: 0 auto;
 }
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--white);
   padding: 12px;
   border-radius: 17px;
   text-align: center;
@@ -31,9 +38,53 @@ body {
   padding: 22px 10px;
 }
 .text h2 {
-  color: hsl(218, 44%, 22%);
+  color: var(--mid-darkblue);
   padding-bottom: 15px;
 }
 .text p {
-  color: hsl(216, 15%, 48%);
+  color: var(--saturated-blue);
+}
+/*DESKTOP*/
+@media (min-width: 1440px) {
+  body {
+    padding: 40px;
+  }
+
+  .container {
+    max-width: 320px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .text {
+    padding: 24px 16px 16px;
+  }
+
+  .text h2 {
+    font-size: 22px;
+  }
+
+  .text p {
+    font-size: 15px;
+  }
+}
+/*MOBILE*/
+@media (min-width: 375px) {
+  .container {
+    max-width: 375px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .text h2 {
+    font-size: 22px;
+  }
+
+  .text p {
+    font-size: 15px;
+  }
 }
